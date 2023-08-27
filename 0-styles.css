@@ -23,6 +23,7 @@
     --color-grey: #a0a0a0;
     --color-light-grey: #f3f3f3;
     --color-dark-grey: #353535;
+    --link-hover-color: #FF6565;
   
     --text-color: var(--color-black);
   
@@ -47,6 +48,8 @@
 
     --flex-direction-row: row;
     --flex-direction-column: column;
+
+    --flex-flow-between: row space-between;
 
     --justify-content-center:center;
     --justify-content-start:flex-start;
@@ -183,28 +186,70 @@
   /* Helpers
       ============================= */
   
-  .visually-hidden:not(:focus):not(:active) {
-      position: absolute !important;
-      height: 1px;
-      width: 1px;
-      overflow: hidden;
-      clip: rect(1px, 1px, 1px, 1px);
-      white-space: nowrap;
-    }
+.visually-hidden:not(:focus):not(:active) {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap;
+}
     
-    .brd {
-        border: 1px solid #D73953;
-    }
-
-      /* Debug style
-      ============================= */
-    #hero-section {
-    height: 100vh;
-    width: 100vw;
-    background-image: url("images/headphones_hero_1.jpg");
-  }
-  
-.primary-color {
-    color: var(--primary-color);
+.brd {
+    border: 1px solid #D73953;
 }
 
+
+
+/* Large screens */
+
+main, footer {
+    width: 100vw;
+    background-image: url(/images/headphones_hero_1.jpg);
+}
+
+.header-hero-container {
+    width: 1000px;
+    min-height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    color: var(--color-white)
+}
+
+header, header ul {
+    display: flex;
+    flex-direction: row;
+}
+header {
+    justify-content: space-between;
+}
+
+header ul {
+    justify-content: space-between;
+    gap: 4rem;
+    list-style: none;
+}
+
+a {
+    color: var(--color-white);
+}
+
+a:hover{
+    text-decoration: none;
+    color: var(--link-hover-color);
+}
+
+@media only screen and (max-width: 480px) {
+    .header-hero-container {
+        max-width: 480px;
+        color: #090909;
+    }
+    header ul {
+        display: none;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 2rem;
+    }
+    
+}
