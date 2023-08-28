@@ -17,7 +17,7 @@
    ============================= */
 
    :root {
-    --color-primary: #D73953;
+    --color-primary: #FF6565;
     --color-black:  #090909;
     --color-white: #ffffff;
     --color-grey: #a0a0a0;
@@ -25,7 +25,7 @@
     --color-dark-grey: #353535;
     --link-hover-color: #FF6565;
   
-    --text-color: var(--color-black);
+    --text-color: var(--color-white);
   
     --font-family-base: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     --font-family-title: 'Raleway', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -145,7 +145,8 @@
     font-family: var(--font-family-title);
     font-weight: var(--font-weight-bold);
   }
-/* Links
+
+  /* Links
     ============================= */
 
   a {
@@ -166,14 +167,13 @@
   }
 /* Buttons
     ============================= */
-  .button {
+  /* .button {
     display: var(--button-display);
     padding: var(--button-padding);
     border: var(--button-border);
     font-size: var(--button-font-size);
-    color: var(--button-color);
     text-decoration: var(--button-text-decoration);
-  }
+  } */
   
   .button:hover {
     color: var(--button-hover-color);
@@ -186,17 +186,20 @@
   /* Helpers
       ============================= */
   
-.visually-hidden:not(:focus):not(:active) {
+/* .visually-hidden:not(:focus):not(:active) {
     position: absolute !important;
     height: 1px;
     width: 1px;
     overflow: hidden;
     clip: rect(1px, 1px, 1px, 1px);
     white-space: nowrap;
-}
+} */
     
 .brd {
-    border: 1px solid #D73953;
+  border: 1px solid #D73953;
+}
+.brd-b {
+  border: 1px solid black;
 }
 
 
@@ -206,7 +209,15 @@
 main, footer {
     width: 100vw;
     background-image: url(/images/headphones_hero_1.jpg);
+    background-repeat:no-repeat
 }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: .5rem  2px;
+}
+
+
+
 
 .header-hero-container {
     width: 1000px;
@@ -225,6 +236,7 @@ header {
     justify-content: space-between;
 }
 
+
 header ul {
     justify-content: space-between;
     gap: 4rem;
@@ -237,7 +249,38 @@ a {
 
 a:hover{
     text-decoration: none;
-    color: var(--link-hover-color);
+    color: var(--color-primary);
+}
+
+.hero-section {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  min-height: 50rem;
+  justify-content: flex-end;
+}
+
+.hero-section-container {
+  max-width: 70rem;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  text-align: center;
+
+}
+
+.hero-section-container button {
+  margin: 2rem .5rem;
+  padding: 1rem 2rem;
+  color: var(--color-white); 
+  border-radius: 2rem;
+  background-color: var(--color-primary);
+  box-shadow: none;
+  border:none;
+}
+
+.hero-section-container p {
+  margin: 2rem .5rem;
 }
 
 @media only screen and (max-width: 480px) {
