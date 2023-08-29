@@ -183,7 +183,7 @@
 
 /************************ Sections ***********************/
 
-main >section{
+main section{
   height: 100vh;
   width: 99vw;
 }
@@ -206,7 +206,7 @@ main > .what-we-do-section, main > .contact-us-section {
 .our-results-section {
   background-image: url(/images/headphones_hero_2.jpg);
   background-repeat:no-repeat;
-  background-position: top;
+  background-position: center;
   background-size:cover;
   display: var(--d-flex);
   flex-direction: var(--flex-direction-column);
@@ -218,14 +218,14 @@ main > .what-we-do-section, main > .contact-us-section {
 
 /* General containers */
 
-.container {
+main .container {
   display: var(--d-flex);
   flex-direction: var(--flex-direction-column);
   justify-content: var(--flex-justify-content-center);
   align-items: var(--flex-align-items-center);
   width: 1000px;
   margin: auto auto;
-  /* border: 1px solid #D73953; */
+
 }
 
 .header-hero-container, .what-we-do-container {
@@ -234,13 +234,14 @@ main > .what-we-do-section, main > .contact-us-section {
   
 }
 
+/*************** Global header-hero-container ************/
+
 .header-hero-container header {
   width: inherit;
   display: var(--d-flex);
   justify-content: var(--flex-justify-content-between);
 }
 
-/*************** Global header-hero-container ************/
 
 .hero-section-container h1, .hero-section-container h6 {
   margin-top: .2rem;
@@ -259,7 +260,7 @@ header ul {
 }
 /* Global what-we-do-container  */
 
-.what-we-do-container  {
+.what-we-do-container, .our-result-container  {
   height: inherit;
   display: flex;
   flex-flow: column wrap;
@@ -269,22 +270,23 @@ header ul {
   padding: 2rem 0px;
 }
 
-.what-we-do-container >.what-we-do-text {
+.what-we-do-container >.what-we-do-text, .our-result-container >.our-result-text {
   display: var(--d-flex);
   flex-direction: var(--flex-direction-column);
   justify-content: var(--flex-justify-content-center);
   align-items: var(--flex-align-items-center);
 }
-.what-we-do-container >.what-we-do-text >p {
+.what-we-do-container >.what-we-do-text >p, .our-result-container >.our-result-text >p {
   width: 700px;
   text-align: center;
 }
 
-.what-we-do-container >.what-we-do-cards {
+.what-we-do-container >.what-we-do-cards,  .our-result-container >.our-result-pentagons{
   display: var(--d-flex);
   flex-direction: row;
   justify-content: space-between;
 }
+
 .what-we-do-cards >.what-we-do-card {
   display: var(--d-flex);
   flex-direction: var(--flex-direction-column);
@@ -296,6 +298,14 @@ header ul {
   text-align: center;
 }
 
+.our-result-pentagons {
+  width: inherit;
+}
+
+.our-result-pentagon img {
+  height: 10rem;
+  width: 10rem;
+}
 
 /* *******************Hero container *****************/
 
