@@ -23,6 +23,7 @@
     --color-grey: #a0a0a0;
     --color-light-grey: #f3f3f3;
     --color-dark-grey: #353535;
+    --color-background-dark: #071629;
     --link-hover-color: #FF6565;
   
     --text-color: var(--color-white);
@@ -195,33 +196,22 @@
     white-space: nowrap;
 } */
     
+
+/*********** Global  */
 .bod {
   border: 1px solid #D73953;
-
 }
 
 
-/* Large screens */
 
-/***** Main *****/
-main, aside, footer {
-  display: var(--d-flex);
-  flex-flow: var(--flex-row-wrap);
-  width: 98.7vw;
-}
+/****************************************** Large screens */
 
-main .what-we-do-section,main .contact-us-section  {
-  color: var(--color-black)
-}
+/******************************************** Main *****/
 
-main section {
-  width: 99vw;
-}
+/* Sections */
 
-main section > .container {
-  width: 1000px;
-  margin: auto auto;
-  border: 1px solid #D73953   ;
+main > section {
+  min-height: 98vh;
 }
 
 .header-hero-section {
@@ -235,6 +225,43 @@ main section > .container {
   justify-content: var(--flex-justify-content-center);
   align-items: var(--flex-align-items-center);
 }
+
+main > .what-we-do-section, main > .contact-us-section {
+  color: var(--color-black)
+}
+
+.our-results-section {
+  height: 100vh;
+  background-image: url(/images/headphones_hero_2.jpg);
+  background-repeat:no-repeat;
+  background-position: top;
+  background-size:cover;
+  display: var(--d-flex);
+  flex-direction: var(--flex-direction-column);
+  justify-content: var(--flex-justify-content-center);
+  align-items: var(--flex-align-items-center);
+
+
+}
+
+main > section, footer > section {
+  width: 99vw;
+}
+
+.what-we-do-section {
+  
+}
+
+
+
+/* containers */
+
+main >section >.container, footer >section >.footer-container {
+  width: 1000px;
+  margin: auto auto;
+  border: 1px solid #D73953;
+}
+
 .header-hero-container, .what-we-do-container {
   display: var(--d-flex);
   flex-direction: var(--flex-direction-column);
@@ -244,6 +271,10 @@ main section > .container {
 .header-hero-container {
   color: var(--color-white);
 }
+
+
+
+
 .hero-section-container h1, .hero-section-container h6 {
   margin-top: .2rem;
   margin-bottom: .8rem;
@@ -254,27 +285,27 @@ main section > .container {
 }
 
 header, header ul {
-    display: var(--d-flex);
-    flex-direction: row;
-}
-header {
-    justify-content: space-between;
+  display: var(--d-flex);
+  flex-direction: row;
 }
 
+header {
+  justify-content: space-between;
+}
 
 header ul {
-    justify-content: space-between;
-    gap: 4rem;
-    list-style: none;
+  justify-content: space-between;
+  gap: 4rem;
+  list-style: none;
 }
 
 a {
-    color: var(--color-white);
+  color: var(--color-white);
 }
 
 a:hover{
-    text-decoration: none;
-    color: var(--color-primary);
+  text-decoration: none;
+  color: var(--color-primary);
 }
 
 .hero-div {
@@ -294,7 +325,7 @@ a:hover{
   justify-content: var(--flex-justify-content-end);
   align-items: center;
   text-align: center;
-
+  
 }
 
 .hero-section-container button {
@@ -307,24 +338,46 @@ a:hover{
   border:none;
 }
 
-.hero-section-container p {
+.hero-section-container > p {
   margin: 2rem .5rem;
 }
 
-.what-we-do-section {
-  
+
+/****************************************************  Footer  */
+.footer-section {
+  background-color: var(--color-background-dark);
 }
 
+.footer-logo-and-icons-container {
+  display: var(--d-flex);
+  flex-flow: var(--flex-row-wrap);
+  justify-content: var(--flex-justify-content-between);
+}
+
+
 @media only screen and (max-width: 480px) {
-    .header-hero-container {
-        max-width: 480px;
-        color: #090909;
-    }
-    header ul {
-        display: none;
-        flex-direction: column;
-        justify-content: flex-start;
-        gap: 2rem;
-    }
+
+  /* ********* Main ******/
+  
+  section >.container {
+    max-width: 480px;
+    margin: auto auto;
+    border: 1px solid #D73953;
+    background-color: #a0a0a0;
+  }
+
+  header ul {
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 2rem;
+}
+
     
+  /* Footer */
+
+  .footer-container {
+    max-width: 480px;
+}
+
 }
