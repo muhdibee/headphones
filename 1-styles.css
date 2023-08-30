@@ -118,18 +118,14 @@
     box-sizing: border-box;
   }
   
-/* html
-    ============================= */
+/******************************** html ============================= */
   html {
   scroll-behavior: smooth;
   font-size: 62.5%;
   }
   
-/* Body
-    ============================= */
+/********************************* Body  ============================= */
   body {
-    /* display: var(--d-flex);
-    flex-direction: var(--flex-direction-column); */
     padding: 0;
     margin: 0;
     color: var(--text-color);
@@ -139,42 +135,34 @@
     line-height: var(--line-height-base);
   }
    */
-/* Headings
-    ============================= */
+/****************************************** Headings    ============================= */
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-family-title);
     font-weight: var(--font-weight-bold);
     margin: .5rem  2px;
   }
 
-  /* Links
-    ============================= */
+  /****************************************** Links    ============================= */
 
   a {
-    color: var(--text-color);
+    color: var(--color-white);
     text-decoration: none;
+  }
+  
+  a:hover{
+    text-decoration: underline;
+    color: var(--color-primary);
   }
   
   a:visited {
     font-style: italic;
   }
   
-  a:hover {
-    text-decoration: underline;
-  }
-  
   a:active {
-    background-color: var(--color-light-grey);
+    color: var(--color-light-grey);
   }
-/* Buttons
-    ============================= */
-  /* .button {
-    display: var(--button-display);
-    padding: var(--button-padding);
-    border: var(--button-border);
-    font-size: var(--button-font-size);
-    text-decoration: var(--button-text-decoration);
-  } */
+
+/*******************************   Buttons    ============================= */
   
   .button:hover {
     color: var(--button-hover-color);
@@ -183,19 +171,7 @@
     transition-duration: var(--transition-duration);
     transition-property: color, background-color;
   } 
-  
-  /* Helpers
-      ============================= */
-  
-/* .visually-hidden:not(:focus):not(:active) {
-    position: absolute !important;
-    height: 1px;
-    width: 1px;
-    overflow: hidden;
-    clip: rect(1px, 1px, 1px, 1px);
-    white-space: nowrap;
-} */
-    
+      
 
 /*********** Global  */
 .bod {
@@ -203,27 +179,24 @@
 }
 
 
+/******************************************** Main *****************************/
 
-/****************************************** Large screens */
+/************************ Sections ***********************/
 
-/******************************************** Main *****/
+main >section{
+  height: 100vh;
+  width: 99vw;
+}
 
-/* Sections */
-
-main > section {
-  min-height: 98vh;
+footer >section {
+  padding: 2rem 0px;
 }
 
 .header-hero-section {
-  height: 100vh;
   background-image: url(/images/headphones_hero_1.jpg);
   background-repeat:no-repeat;
   background-position: top;
   background-size:cover;
-  display: var(--d-flex);
-  flex-direction: var(--flex-direction-column);
-  justify-content: var(--flex-justify-content-center);
-  align-items: var(--flex-align-items-center);
 }
 
 main > .what-we-do-section, main > .contact-us-section {
@@ -231,7 +204,6 @@ main > .what-we-do-section, main > .contact-us-section {
 }
 
 .our-results-section {
-  height: 100vh;
   background-image: url(/images/headphones_hero_2.jpg);
   background-repeat:no-repeat;
   background-position: top;
@@ -240,26 +212,20 @@ main > .what-we-do-section, main > .contact-us-section {
   flex-direction: var(--flex-direction-column);
   justify-content: var(--flex-justify-content-center);
   align-items: var(--flex-align-items-center);
-
-
-}
-
-main > section, footer > section {
-  width: 99vw;
-}
-
-.what-we-do-section {
-  
 }
 
 
 
-/* containers */
+/* General containers */
 
-main >section >.container, footer >section >.footer-container {
+.container {
+  display: var(--d-flex);
+  flex-direction: var(--flex-direction-column);
+  justify-content: var(--flex-justify-content-center);
+  align-items: var(--flex-align-items-center);
   width: 1000px;
   margin: auto auto;
-  border: 1px solid #D73953;
+  /* border: 1px solid #D73953; */
 }
 
 .header-hero-container, .what-we-do-container {
@@ -268,45 +234,70 @@ main >section >.container, footer >section >.footer-container {
   
 }
 
-.header-hero-container {
-  color: var(--color-white);
+.header-hero-container header {
+  width: inherit;
+  display: var(--d-flex);
+  justify-content: var(--flex-justify-content-between);
 }
 
-
-
+/*************** Global header-hero-container ************/
 
 .hero-section-container h1, .hero-section-container h6 {
   margin-top: .2rem;
   margin-bottom: .8rem;
 }
 
-.what-we-do-container  {
-  color: var(--color-black);
-}
-
 header, header ul {
   display: var(--d-flex);
   flex-direction: row;
-}
-
-header {
   justify-content: space-between;
 }
 
 header ul {
-  justify-content: space-between;
   gap: 4rem;
   list-style: none;
 }
+/* Global what-we-do-container  */
 
-a {
-  color: var(--color-white);
+.what-we-do-container  {
+  height: inherit;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: space-around;
+  gap: 4rem;
+  padding: 2rem 0px;
 }
 
-a:hover{
-  text-decoration: none;
-  color: var(--color-primary);
+.what-we-do-container >.what-we-do-text {
+  display: var(--d-flex);
+  flex-direction: var(--flex-direction-column);
+  justify-content: var(--flex-justify-content-center);
+  align-items: var(--flex-align-items-center);
 }
+.what-we-do-container >.what-we-do-text >p {
+  width: 700px;
+  text-align: center;
+}
+
+.what-we-do-container >.what-we-do-cards {
+  display: var(--d-flex);
+  flex-direction: row;
+  justify-content: space-between;
+}
+.what-we-do-cards >.what-we-do-card {
+  display: var(--d-flex);
+  flex-direction: var(--flex-direction-column);
+  justify-content: var(--flex-justify-content-center);
+  align-items: var(--flex-align-items-center);
+}
+
+.what-we-do-card p{
+  text-align: center;
+}
+
+
+/* *******************Hero container *****************/
 
 .hero-div {
   display: flex;
