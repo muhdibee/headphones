@@ -218,8 +218,10 @@ main section {
   width: 99vw;
 }
 
-main section div {
+main section > .container {
   width: 1000px;
+  margin: auto auto;
+  border: 1px solid #D73953   ;
 }
 
 .header-hero-section {
