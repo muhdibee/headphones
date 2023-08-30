@@ -210,7 +210,7 @@ main, aside, footer {
   width: 98.7vw;
 }
 
-main .what-we-do-section {
+main .what-we-do-section,main .contact-us-section  {
   color: var(--color-black)
 }
 
