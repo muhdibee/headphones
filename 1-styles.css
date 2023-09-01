@@ -86,26 +86,14 @@
   
     /** FOOTER **/
     --footer-padding: 5rem 0 1rem;
-  
-    /** NAVBAR **/
-    --nav-item-font-family: var(--font-family-headings);
-    --nav-item-font-weight: var(--font-weight-bold);
-    --nav-item-font-size: var(--font-size-medium);
-    --nav-item-letter-spacing: .04rem;
-    --nav-item-display: inline-block;
-    --nav-item-margin: 0 2rem 0 0;
-    --nav-item-link-hover: var(--color-white);
-  
+      
     /** BUTTON **/
     --button-display: inline-block;
     --button-padding: 1.5rem 3rem;
     --button-border: var(--color-primary) solid 0.2rem;
-    --button-color: var(--color-black);
     --button-text-decoration: none;
     --button-font-size: var(--font-size-large);
-    --button-hover-color: var(--color-white);
     --button-hover-text-decoration: none;
-    --button-hover-background: var(--color-primary);
   
     /** MOTION **/
     --transition-duration: .3s;
@@ -145,8 +133,8 @@
   /****************************************** Links    ============================= */
 
   a {
-    color: var(--color-white);
     text-decoration: none;
+    color: var(--color-white);
   }
   
   a:hover{
@@ -174,9 +162,14 @@
       
 
 /*********** Global  */
-.bod {
+.brd {
   border: 1px solid #D73953;
 }
+
+p, h1, h2, h3, h4,h5, h6{
+  text-align: center;
+}
+
 
 
 /******************************************** Main *****************************/
@@ -184,12 +177,8 @@
 /************************ Sections ***********************/
 
 main section{
-  height: 100vh;
-  width: 99vw;
-}
-
-footer >section {
-  padding: 2rem 0px;
+  height: 99vh;
+  width: 100%;
 }
 
 .header-hero-section {
@@ -218,7 +207,7 @@ main > .what-we-do-section, main > .contact-us-section {
 
 /* General containers */
 
-main .container {
+main .container, footer .container {
   display: var(--d-flex);
   flex-direction: var(--flex-direction-column);
   justify-content: var(--flex-justify-content-center);
@@ -226,12 +215,6 @@ main .container {
   width: 1000px;
   margin: auto auto;
 
-}
-
-.header-hero-container, .what-we-do-container {
-  display: var(--d-flex);
-  flex-direction: var(--flex-direction-column);
-  
 }
 
 /*************** Global header-hero-container ************/
@@ -260,14 +243,16 @@ header ul {
 }
 /* Global what-we-do-container  */
 
-.what-we-do-container, .our-result-container  {
+.what-we-do-container, .our-result-container, .contact-us-container  {
   height: inherit;
   display: flex;
-  flex-flow: column wrap;
+  flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
   gap: 4rem;
   padding: 2rem 0px;
+  margin: auto auto;
 }
 
 .what-we-do-container >.what-we-do-text, .our-result-container >.our-result-text {
@@ -303,8 +288,8 @@ header ul {
 }
 
 .our-result-pentagon img {
-  height: 10rem;
-  width: 10rem;
+  height: 14rem;
+  width: 14rem;
 }
 
 /* *******************Hero container *****************/
@@ -315,18 +300,16 @@ header ul {
   align-items: center;
   min-height: 50rem;
   justify-content: flex-end;
-  /* border: 1px solid red; */
 }
 
 .hero-section-container {
-  max-width: 70rem;
-  /* border: 1px solid #D73953; */
+  width: 70rem;
   display: flex;
   flex-flow: column wrap;
   justify-content: var(--flex-justify-content-end);
   align-items: center;
   text-align: center;
-  
+  padding-bottom: 2rem; 
 }
 
 .hero-section-container button {
@@ -345,7 +328,12 @@ header ul {
 
 
 /****************************************************  Footer  */
-.footer-section {
+footer {
+  height: 35vh;
+  padding: 4rem 0px;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
   background-color: var(--color-background-dark);
 }
 
@@ -356,29 +344,67 @@ header ul {
 }
 
 
-@media only screen and (max-width: 480px) {
+@media screen and (max-width: 1000px) {
 
   /* ********* Main ******/
   
-  section >.container {
-    max-width: 480px;
-    margin: auto auto;
+  /* *{
     border: 1px solid #D73953;
-    background-color: #a0a0a0;
+  } */
+
+  main section{
+    height: auto;
+    width: 100%;
+  }
+  
+
+  main .container, footer .container {
+    display: var(--d-flex);
+    flex-direction: var(--flex-direction-column);
+    justify-content: var(--flex-justify-content-center);
+    align-items: var(--flex-align-items-center);
+    width: 100%;
+    margin: auto auto;
+  
+  }
+  
+  .container {
+    width: inherit;
+    margin: auto auto;
+  }
+
+  .hero-section-container {
+    width: inherit;
+  }
+  
+  header {
+    display: flex;
+    flex-flow: var(--flex-column-wrap);
   }
 
   header ul {
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    gap: 2rem;
+    gap: 1rem;
+    background-color: var(--color-dark-grey);
+  }
+.header-li a{
+    color: var(--color-white);
+    
+}
+
+.what-we-do-container >.what-we-do-text >p, .our-result-container >.our-result-text >p {
+  width: 99%;
+  text-align: center;
+}
+
+.our-result-pentagon img {
+  height: 7rem;
+  width: 7rem;
 }
 
     
   /* Footer */
-
-  .footer-container {
-    max-width: 480px;
-}
 
 }
