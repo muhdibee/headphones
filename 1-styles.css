@@ -329,7 +329,7 @@ header ul {
 
 /****************************************************  Footer  */
 footer {
-  height: 35vh;
+  height: 25vh;
   padding: 4rem 0px;
   display: flex; 
   justify-content: center;
@@ -337,10 +337,23 @@ footer {
   background-color: var(--color-background-dark);
 }
 
-.footer-logo-and-icons-container {
+footer section {
+  width: 100%;
+}
+
+.footer-container{
+  gap:1rem  
+}
+
+.footer-container >.footer-logo-and-icons-container {
+  width: inherit;
   display: var(--d-flex);
   flex-flow: var(--flex-row-wrap);
   justify-content: var(--flex-justify-content-between);
+}
+
+.footer-container >.copy-right {
+  color: var(--color-grey);
 }
 
 
@@ -365,7 +378,6 @@ footer {
     align-items: var(--flex-align-items-center);
     width: 100%;
     margin: auto auto;
-  
   }
   
   .container {
@@ -406,5 +418,8 @@ footer {
 
     
   /* Footer */
-
+  .footer-container >.footer-logo-and-icons-container {
+    width: 100%;
+  }
+  
 }
