@@ -312,7 +312,7 @@ header ul {
   padding-bottom: 2rem; 
 }
 
-.hero-section-container button {
+ button {
   margin: 3rem .5rem;
   padding: 1rem 2rem;
   color: var(--color-white); 
@@ -326,8 +326,37 @@ header ul {
   margin: 2rem .5rem;
 }
 
+/**************************************** Contact us ************/
 
-/****************************************************  Footer  */
+.contact-us-container .contact-us {
+  width: 450px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: var(--flex-justify-content-center);
+  align-items: center;
+  gap: 3rem;
+  text-align: center;
+}
+
+.contact-us form {
+  width: inherit;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: var(--flex-justify-content-center);
+  align-items: center;
+  gap: 2rem;
+}
+.contact-us form input {
+  width: inherit;
+  border: 0;
+  gap: 4rem;
+  border-bottom: 1px ridge;
+  /* border: 1px solid #D73953; */
+
+}
+
+
+/****************************************************  Footer  ****************/
 footer {
   height: 25vh;
   padding: 4rem 0px;
@@ -387,6 +416,7 @@ footer section {
 
   .hero-section-container {
     width: inherit;
+    padding: 0rem 1rem;
   }
   
   header {
@@ -409,17 +439,27 @@ footer section {
 .what-we-do-container >.what-we-do-text >p, .our-result-container >.our-result-text >p {
   width: 99%;
   text-align: center;
+  padding: 0rem 1rem;
+
 }
 
 .our-result-pentagon img {
   height: 7rem;
   width: 7rem;
+  padding: 0rem 1rem;
+
 }
 
+.contact-us-container .contact-us {
+  width: inherit;
+  padding: 0 3rem;
+}  
     
   /* Footer */
   .footer-container >.footer-logo-and-icons-container {
     width: 100%;
+    padding: 0rem 1rem;
   }
+
   
 }
