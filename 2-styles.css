@@ -203,6 +203,28 @@ main > .what-we-do-section, main > .contact-us-section {
   align-items: var(--flex-align-items-center);
 }
 
+.our-result-pentagons {
+  display: flex;
+  flex-flow: var(--flex-row-wrap);
+  margin-bottom: 2rem;
+
+}
+
+.our-result-pentagon{
+  width: auto;
+  position:relative;
+  display: flex;
+  justify-content: var(--flex-justify-content-center);
+  align-items: var(--flex-align-items-center);
+  text-align: center;
+}
+.our-result-pentagon >div h1, .our-result-pentagon >div p{
+  margin: 0 0;
+}
+.our-result-pentagon >div {
+  position: absolute;
+}
+
 
 
 /* General containers */
@@ -288,8 +310,8 @@ header ul {
 }
 
 .our-result-pentagon img {
-  height: 14rem;
-  width: 14rem;
+  height: 20rem;
+  width: 20rem;
 }
 
 /* *******************Hero container *****************/
@@ -462,11 +484,6 @@ footer section {
   /* border: 1px solid #D73953; */
 }
 
-
-.our-result-pentagon img {
-  height: 7rem;
-  width: 7rem;
-}
 
 .contact-us-container .contact-us {
   width: inherit;
