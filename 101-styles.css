@@ -380,7 +380,7 @@ button :hover, .our-result-pentagon:hover, .what-we-do-card >div:hover{
   padding: .7rem 0px;
   border: 0;
   gap: 4rem;
-  border-bottom: 1px ridge;
+  border-bottom: 2px ridge;
   /* border: 1px solid #D73953; */
 
 }

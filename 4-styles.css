@@ -188,6 +188,10 @@ main section{
   background-size:cover;
 }
 
+.hamburger, .close {
+  display: none;
+}
+
 main > .what-we-do-section, main > .contact-us-section {
   color: var(--color-black)
 }
@@ -421,6 +425,8 @@ footer section {
 }
 
 
+/* ************************************* Small screens ************************************************************** */
+
 @media screen and (max-width: 1000px) {
 
   /* ********* Main ******/
@@ -453,22 +459,49 @@ footer section {
     width: inherit;
   }
   
-  header {
+  .navbar-container{
+    position:fixed;
     display: flex;
-    flex-flow: var(--flex-column-wrap);
+    justify-content: space-between;
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+    width: 90vw;
+    height: 100vh;
+    background-color: var(--color-background-dark);
+    padding-top: 3rem;
   }
 
+  header {
+    display: flex;
+    flex-direction: var(--flex-direction-row);
+  }  
+
   header ul {
-    display: none;
     flex-direction: column;
     justify-content: flex-start;
+    font-size: 3rem;
     gap: 1rem;
-    background-color: var(--color-dark-grey);
+    width: 80%;
+    padding: 0%;
   }
-.header-li a{
-    color: var(--color-white);
-    
+
+  header ul .header-li:hover {
+    color: #111;
+    background-color: #111;
+  }
+
+  .header-li a{
+      color: var(--color-white);
+  }
+
+.hamburger, .close {
+  display: inline;
+  font-size: 2.5rem;
+  height: fit-content;
+  width: fit-content;
 }
+
 
 .what-we-do-container >.what-we-do-text >p, .our-result-container >.our-result-text >p {
   width: 99%;
