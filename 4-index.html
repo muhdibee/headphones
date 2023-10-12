@@ -26,15 +26,15 @@
         <section class="header-hero-section">
             <div class=" container header-hero-container">
                 <!--Header content-->
-                <header class="brd">
-                    <span class="hamburger">☰</span>
+                <header class="">
+                    <span class="hamburger" onclick="handleOpen()">☰</span>
                     <a href="#" id="logo" class=""><img src="./images/logo_headphones.png" alt="Headphones-logo"></a>
                     <div class="navbar-container" style=""> 
                         <span class="close" onclick="handleClose()">🗙</span>
                         <ul class="">
-                            <li class="header-li"><a href="#what-we-do">what we do</a></li>
-                            <li class="header-li"><a href="#our-result">our result</a></li>
-                            <li class="header-li"><a href="#contact-us">contact us</a></li>
+                            <li class="header-li" onclick="handleClose()"><a href="#what-we-do">what we do</a></li>
+                            <li class="header-li" onclick="handleClose()"><a href="#our-result">our result</a></li>
+                            <li class="header-li" onclick="handleClose()"><a href="#contact-us">contact us</a></li>
                         </ul>
                     </div>
                 </header>
@@ -178,13 +178,16 @@
 
 </html>
 <script>
-    function handleClose(){
-        var navbar_container = document.querySelector(".navbar-container");
-        var closebtn = document.querySelector('.close');
 
-        closebtn.style.backgroundColor = 'red';
-        navbar_container.style.backgroundColor  = "red";
-        document.body.style.backgroundColor = "#dc143c";
+var navbar_container = document.querySelector(".navbar-container");
+var hamburger = document.querySelector(".hamburger");
+
+    function handleClose(){
+        navbar_container.style.display = 'none';
+    }
+
+    function handleOpen(){
+        navbar_container.style.display = 'flex';
     }
 
   </script>
