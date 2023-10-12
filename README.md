@@ -1,3 +1,3 @@
 # headphones
 
-Headphones, a fictitious company
+Headphones, a fictitious company.
