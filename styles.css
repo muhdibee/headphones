@@ -305,6 +305,12 @@ header ul {
   align-items: var(--flex-align-items-center);
 }
 
+.what-we-do-cards >div:hover, .our-result-pentagons >div >img:hover, button:hover {
+  /* opacity: 0.5; */
+  cursor: pointer;
+  box-shadow: 0 0 2rem var(--color-grey);
+}
+
 .what-we-do-card p{
   text-align: center;
 }
