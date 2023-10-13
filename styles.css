@@ -305,10 +305,14 @@ header ul {
   align-items: var(--flex-align-items-center);
 }
 
-.what-we-do-cards >div:hover, .our-result-pentagons >div >img:hover, button:hover {
-  /* opacity: 0.5; */
+.what-we-do-cards >div:hover >div >img:hover, button:hover {
   cursor: pointer;
   box-shadow: 0 0 2rem var(--color-grey);
+}
+
+.close:hover, .hamburger:hover, .logo:hover, .our-result-pentagons {
+  opacity: 0.5;
+  
 }
 
 .what-we-do-card p{
